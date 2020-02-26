@@ -3,25 +3,73 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		173C769FFF6072EF5A53F09E /* Pods_RepositorySurfer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6D12B74342FEFAF471EFE72 /* Pods_RepositorySurfer.framework */; };
 		BA23D8F52405ECA40041D221 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D8F42405ECA40041D221 /* AppDelegate.swift */; };
-		BA23D8F92405ECA40041D221 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D8F82405ECA40041D221 /* ViewController.swift */; };
+		BA23D8F92405ECA40041D221 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D8F82405ECA40041D221 /* UsersViewController.swift */; };
 		BA23D8FC2405ECA40041D221 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA23D8FA2405ECA40041D221 /* Main.storyboard */; };
 		BA23D8FE2405ECA50041D221 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA23D8FD2405ECA50041D221 /* Assets.xcassets */; };
 		BA23D9012405ECA50041D221 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA23D8FF2405ECA50041D221 /* LaunchScreen.storyboard */; };
+		BA23D9102405F7F20041D221 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D90F2405F7F20041D221 /* User.swift */; };
+		BA23D9122405F7FD0041D221 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D9112405F7FD0041D221 /* Repository.swift */; };
+		BA23D9142405F8360041D221 /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D9132405F8360041D221 /* Worker.swift */; };
+		BA23D9162405F84D0041D221 /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D9152405F84D0041D221 /* GitHubAPI.swift */; };
+		BA23D9182405FCEC0041D221 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D9172405FCEC0041D221 /* Builder.swift */; };
+		BA23D91A2405FD640041D221 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D9192405FD640041D221 /* UserTableViewCell.swift */; };
+		BA23D91C2405FD7B0041D221 /* UIImageViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D91B2405FD7B0041D221 /* UIImageViewEx.swift */; };
+		BA23D91E2405FFD80041D221 /* Repositories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA23D91D2405FFD80041D221 /* Repositories.storyboard */; };
+		BA23D920240600040041D221 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D91F240600040041D221 /* UserDetailViewController.swift */; };
+		BA23D9222406006B0041D221 /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D9212406006B0041D221 /* RepositoryTableViewCell.swift */; };
+		BA23D924240602440041D221 /* RepositoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D923240602440041D221 /* RepositoryViewController.swift */; };
+		BA23D926240602AD0041D221 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA23D925240602AD0041D221 /* WebKit.framework */; };
+		BA23D928240607EC0041D221 /* ViperProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D927240607EC0041D221 /* ViperProtocols.swift */; };
+		BA23D92A240608080041D221 /* UsersInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D929240608080041D221 /* UsersInteractor.swift */; };
+		BA23D92C2406081E0041D221 /* UsersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D92B2406081E0041D221 /* UsersPresenter.swift */; };
+		BA23D92E240608310041D221 /* UsersRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D92D240608310041D221 /* UsersRouter.swift */; };
+		BA23D93324060D290041D221 /* UserDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D93224060D290041D221 /* UserDetailPresenter.swift */; };
+		BA23D93524060D360041D221 /* UserDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D93424060D360041D221 /* UserDetailInteractor.swift */; };
+		BA23D93724060D460041D221 /* UserDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D93624060D460041D221 /* UserDetailRouter.swift */; };
+		BA23D9392406185E0041D221 /* RepositoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D9382406185E0041D221 /* RepositoryInteractor.swift */; };
+		BA23D93B2406186A0041D221 /* RepositoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D93A2406186A0041D221 /* RepositoryPresenter.swift */; };
+		BA23D93D240618770041D221 /* RepositoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D93C240618770041D221 /* RepositoryRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11B42AD116BFF8EDAF7E0249 /* Pods-RepositorySurfer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RepositorySurfer.release.xcconfig"; path = "Target Support Files/Pods-RepositorySurfer/Pods-RepositorySurfer.release.xcconfig"; sourceTree = "<group>"; };
+		B6D12B74342FEFAF471EFE72 /* Pods_RepositorySurfer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RepositorySurfer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA23D8F12405ECA40041D221 /* RepositorySurfer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RepositorySurfer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA23D8F42405ECA40041D221 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BA23D8F82405ECA40041D221 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BA23D8F82405ECA40041D221 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		BA23D8FB2405ECA40041D221 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BA23D8FD2405ECA50041D221 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA23D9002405ECA50041D221 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA23D9022405ECA50041D221 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA23D90F2405F7F20041D221 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BA23D9112405F7FD0041D221 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		BA23D9132405F8360041D221 /* Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
+		BA23D9152405F84D0041D221 /* GitHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPI.swift; sourceTree = "<group>"; };
+		BA23D9172405FCEC0041D221 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		BA23D9192405FD640041D221 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		BA23D91B2405FD7B0041D221 /* UIImageViewEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewEx.swift; sourceTree = "<group>"; };
+		BA23D91D2405FFD80041D221 /* Repositories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Repositories.storyboard; sourceTree = "<group>"; };
+		BA23D91F240600040041D221 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		BA23D9212406006B0041D221 /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
+		BA23D923240602440041D221 /* RepositoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryViewController.swift; sourceTree = "<group>"; };
+		BA23D925240602AD0041D221 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		BA23D927240607EC0041D221 /* ViperProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperProtocols.swift; sourceTree = "<group>"; };
+		BA23D929240608080041D221 /* UsersInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersInteractor.swift; sourceTree = "<group>"; };
+		BA23D92B2406081E0041D221 /* UsersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersPresenter.swift; sourceTree = "<group>"; };
+		BA23D92D240608310041D221 /* UsersRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRouter.swift; sourceTree = "<group>"; };
+		BA23D93224060D290041D221 /* UserDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailPresenter.swift; sourceTree = "<group>"; };
+		BA23D93424060D360041D221 /* UserDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailInteractor.swift; sourceTree = "<group>"; };
+		BA23D93624060D460041D221 /* UserDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailRouter.swift; sourceTree = "<group>"; };
+		BA23D9382406185E0041D221 /* RepositoryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryInteractor.swift; sourceTree = "<group>"; };
+		BA23D93A2406186A0041D221 /* RepositoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryPresenter.swift; sourceTree = "<group>"; };
+		BA23D93C240618770041D221 /* RepositoryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRouter.swift; sourceTree = "<group>"; };
+		DDDF05E43C139411C58E1709 /* Pods-RepositorySurfer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RepositorySurfer.debug.xcconfig"; path = "Target Support Files/Pods-RepositorySurfer/Pods-RepositorySurfer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +77,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA23D926240602AD0041D221 /* WebKit.framework in Frameworks */,
+				173C769FFF6072EF5A53F09E /* Pods_RepositorySurfer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C7AD8DCD12A7B47FFBE6E40 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DDDF05E43C139411C58E1709 /* Pods-RepositorySurfer.debug.xcconfig */,
+				11B42AD116BFF8EDAF7E0249 /* Pods-RepositorySurfer.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BA23D8E82405ECA40041D221 = {
 			isa = PBXGroup;
 			children = (
 				BA23D8F32405ECA40041D221 /* RepositorySurfer */,
 				BA23D8F22405ECA40041D221 /* Products */,
+				3C7AD8DCD12A7B47FFBE6E40 /* Pods */,
+				D2FBE1DC6A319246BDC1D774 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,7 +121,7 @@
 				BA23D9082405F6A00041D221 /* Entities */,
 				BA23D9092405F6AE0041D221 /* Networking */,
 				BA23D90A2405F6C20041D221 /* Users Scene */,
-				BA23D90B2405F6D20041D221 /* Repositories Scene */,
+				BA23D90B2405F6D20041D221 /* Repositories Scenes */,
 				BA23D90D2405F6F00041D221 /* Extenstions */,
 				BA23D90E2405F6F60041D221 /* Resources */,
 			);
@@ -70,6 +131,8 @@
 		BA23D9082405F6A00041D221 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				BA23D90F2405F7F20041D221 /* User.swift */,
+				BA23D9112405F7FD0041D221 /* Repository.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -77,6 +140,8 @@
 		BA23D9092405F6AE0041D221 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				BA23D9132405F8360041D221 /* Worker.swift */,
+				BA23D9152405F84D0041D221 /* GitHubAPI.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -85,21 +150,30 @@
 			isa = PBXGroup;
 			children = (
 				BA23D8FA2405ECA40041D221 /* Main.storyboard */,
-				BA23D8F82405ECA40041D221 /* ViewController.swift */,
+				BA23D8F82405ECA40041D221 /* UsersViewController.swift */,
+				BA23D9192405FD640041D221 /* UserTableViewCell.swift */,
+				BA23D929240608080041D221 /* UsersInteractor.swift */,
+				BA23D92B2406081E0041D221 /* UsersPresenter.swift */,
+				BA23D92D240608310041D221 /* UsersRouter.swift */,
 			);
 			path = "Users Scene";
 			sourceTree = "<group>";
 		};
-		BA23D90B2405F6D20041D221 /* Repositories Scene */ = {
+		BA23D90B2405F6D20041D221 /* Repositories Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				BA23D91D2405FFD80041D221 /* Repositories.storyboard */,
+				BA23D93024060CD70041D221 /* User Detail Scene */,
+				BA23D93124060CEA0041D221 /* Repository Scene */,
 			);
-			path = "Repositories Scene";
+			path = "Repositories Scenes";
 			sourceTree = "<group>";
 		};
 		BA23D90C2405F6E20041D221 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				BA23D9172405FCEC0041D221 /* Builder.swift */,
+				BA23D927240607EC0041D221 /* ViperProtocols.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -107,6 +181,7 @@
 		BA23D90D2405F6F00041D221 /* Extenstions */ = {
 			isa = PBXGroup;
 			children = (
+				BA23D91B2405FD7B0041D221 /* UIImageViewEx.swift */,
 			);
 			path = Extenstions;
 			sourceTree = "<group>";
@@ -120,6 +195,38 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		BA23D93024060CD70041D221 /* User Detail Scene */ = {
+			isa = PBXGroup;
+			children = (
+				BA23D91F240600040041D221 /* UserDetailViewController.swift */,
+				BA23D9212406006B0041D221 /* RepositoryTableViewCell.swift */,
+				BA23D93424060D360041D221 /* UserDetailInteractor.swift */,
+				BA23D93224060D290041D221 /* UserDetailPresenter.swift */,
+				BA23D93624060D460041D221 /* UserDetailRouter.swift */,
+			);
+			path = "User Detail Scene";
+			sourceTree = "<group>";
+		};
+		BA23D93124060CEA0041D221 /* Repository Scene */ = {
+			isa = PBXGroup;
+			children = (
+				BA23D923240602440041D221 /* RepositoryViewController.swift */,
+				BA23D9382406185E0041D221 /* RepositoryInteractor.swift */,
+				BA23D93A2406186A0041D221 /* RepositoryPresenter.swift */,
+				BA23D93C240618770041D221 /* RepositoryRouter.swift */,
+			);
+			path = "Repository Scene";
+			sourceTree = "<group>";
+		};
+		D2FBE1DC6A319246BDC1D774 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA23D925240602AD0041D221 /* WebKit.framework */,
+				B6D12B74342FEFAF471EFE72 /* Pods_RepositorySurfer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -127,9 +234,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA23D9052405ECA50041D221 /* Build configuration list for PBXNativeTarget "RepositorySurfer" */;
 			buildPhases = (
+				2A979735D2312EB6260B5058 /* [CP] Check Pods Manifest.lock */,
 				BA23D8ED2405ECA40041D221 /* Sources */,
 				BA23D8EE2405ECA40041D221 /* Frameworks */,
 				BA23D8EF2405ECA40041D221 /* Resources */,
+				728E533A488712095E25ED76 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -180,19 +289,82 @@
 			files = (
 				BA23D9012405ECA50041D221 /* LaunchScreen.storyboard in Resources */,
 				BA23D8FE2405ECA50041D221 /* Assets.xcassets in Resources */,
+				BA23D91E2405FFD80041D221 /* Repositories.storyboard in Resources */,
 				BA23D8FC2405ECA40041D221 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2A979735D2312EB6260B5058 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RepositorySurfer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		728E533A488712095E25ED76 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RepositorySurfer/Pods-RepositorySurfer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RepositorySurfer/Pods-RepositorySurfer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RepositorySurfer/Pods-RepositorySurfer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BA23D8ED2405ECA40041D221 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA23D8F92405ECA40041D221 /* ViewController.swift in Sources */,
+				BA23D93724060D460041D221 /* UserDetailRouter.swift in Sources */,
+				BA23D93524060D360041D221 /* UserDetailInteractor.swift in Sources */,
+				BA23D9142405F8360041D221 /* Worker.swift in Sources */,
+				BA23D928240607EC0041D221 /* ViperProtocols.swift in Sources */,
+				BA23D9162405F84D0041D221 /* GitHubAPI.swift in Sources */,
+				BA23D9182405FCEC0041D221 /* Builder.swift in Sources */,
+				BA23D91C2405FD7B0041D221 /* UIImageViewEx.swift in Sources */,
+				BA23D92C2406081E0041D221 /* UsersPresenter.swift in Sources */,
+				BA23D93B2406186A0041D221 /* RepositoryPresenter.swift in Sources */,
+				BA23D924240602440041D221 /* RepositoryViewController.swift in Sources */,
+				BA23D8F92405ECA40041D221 /* UsersViewController.swift in Sources */,
+				BA23D92A240608080041D221 /* UsersInteractor.swift in Sources */,
+				BA23D91A2405FD640041D221 /* UserTableViewCell.swift in Sources */,
+				BA23D9222406006B0041D221 /* RepositoryTableViewCell.swift in Sources */,
+				BA23D93D240618770041D221 /* RepositoryRouter.swift in Sources */,
+				BA23D93324060D290041D221 /* UserDetailPresenter.swift in Sources */,
+				BA23D920240600040041D221 /* UserDetailViewController.swift in Sources */,
 				BA23D8F52405ECA40041D221 /* AppDelegate.swift in Sources */,
+				BA23D9392406185E0041D221 /* RepositoryInteractor.swift in Sources */,
+				BA23D9102405F7F20041D221 /* User.swift in Sources */,
+				BA23D9122405F7FD0041D221 /* Repository.swift in Sources */,
+				BA23D92E240608310041D221 /* UsersRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +506,7 @@
 		};
 		BA23D9062405ECA50041D221 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDDF05E43C139411C58E1709 /* Pods-RepositorySurfer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -352,6 +525,7 @@
 		};
 		BA23D9072405ECA50041D221 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11B42AD116BFF8EDAF7E0249 /* Pods-RepositorySurfer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
