@@ -17,6 +17,7 @@
 		BA23D9122405F7FD0041D221 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D9112405F7FD0041D221 /* Repository.swift */; };
 		BA23D9142405F8360041D221 /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D9132405F8360041D221 /* Worker.swift */; };
 		BA23D9162405F84D0041D221 /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D9152405F84D0041D221 /* GitHubAPI.swift */; };
+		BA23D9182405FCEC0041D221 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D9172405FCEC0041D221 /* Builder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		BA23D9112405F7FD0041D221 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		BA23D9132405F8360041D221 /* Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
 		BA23D9152405F84D0041D221 /* GitHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPI.swift; sourceTree = "<group>"; };
+		BA23D9172405FCEC0041D221 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		DDDF05E43C139411C58E1709 /* Pods-RepositorySurfer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RepositorySurfer.debug.xcconfig"; path = "Target Support Files/Pods-RepositorySurfer/Pods-RepositorySurfer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,6 +130,7 @@
 		BA23D90C2405F6E20041D221 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				BA23D9172405FCEC0041D221 /* Builder.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			files = (
 				BA23D9142405F8360041D221 /* Worker.swift in Sources */,
 				BA23D9162405F84D0041D221 /* GitHubAPI.swift in Sources */,
+				BA23D9182405FCEC0041D221 /* Builder.swift in Sources */,
 				BA23D8F92405ECA40041D221 /* ViewController.swift in Sources */,
 				BA23D8F52405ECA40041D221 /* AppDelegate.swift in Sources */,
 				BA23D9102405F7F20041D221 /* User.swift in Sources */,
