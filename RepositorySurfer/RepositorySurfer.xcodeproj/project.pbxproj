@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		173C769FFF6072EF5A53F09E /* Pods_RepositorySurfer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6D12B74342FEFAF471EFE72 /* Pods_RepositorySurfer.framework */; };
 		BA23D8F52405ECA40041D221 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D8F42405ECA40041D221 /* AppDelegate.swift */; };
 		BA23D8F92405ECA40041D221 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D8F82405ECA40041D221 /* ViewController.swift */; };
 		BA23D8FC2405ECA40041D221 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA23D8FA2405ECA40041D221 /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11B42AD116BFF8EDAF7E0249 /* Pods-RepositorySurfer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RepositorySurfer.release.xcconfig"; path = "Target Support Files/Pods-RepositorySurfer/Pods-RepositorySurfer.release.xcconfig"; sourceTree = "<group>"; };
+		B6D12B74342FEFAF471EFE72 /* Pods_RepositorySurfer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RepositorySurfer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA23D8F12405ECA40041D221 /* RepositorySurfer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RepositorySurfer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA23D8F42405ECA40041D221 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA23D8F82405ECA40041D221 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		BA23D8FD2405ECA50041D221 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA23D9002405ECA50041D221 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA23D9022405ECA50041D221 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDDF05E43C139411C58E1709 /* Pods-RepositorySurfer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RepositorySurfer.debug.xcconfig"; path = "Target Support Files/Pods-RepositorySurfer/Pods-RepositorySurfer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				173C769FFF6072EF5A53F09E /* Pods_RepositorySurfer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C7AD8DCD12A7B47FFBE6E40 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DDDF05E43C139411C58E1709 /* Pods-RepositorySurfer.debug.xcconfig */,
+				11B42AD116BFF8EDAF7E0249 /* Pods-RepositorySurfer.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BA23D8E82405ECA40041D221 = {
 			isa = PBXGroup;
 			children = (
 				BA23D8F32405ECA40041D221 /* RepositorySurfer */,
 				BA23D8F22405ECA40041D221 /* Products */,
+				3C7AD8DCD12A7B47FFBE6E40 /* Pods */,
+				D2FBE1DC6A319246BDC1D774 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,6 +137,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		D2FBE1DC6A319246BDC1D774 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B6D12B74342FEFAF471EFE72 /* Pods_RepositorySurfer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -127,9 +152,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA23D9052405ECA50041D221 /* Build configuration list for PBXNativeTarget "RepositorySurfer" */;
 			buildPhases = (
+				2A979735D2312EB6260B5058 /* [CP] Check Pods Manifest.lock */,
 				BA23D8ED2405ECA40041D221 /* Sources */,
 				BA23D8EE2405ECA40041D221 /* Frameworks */,
 				BA23D8EF2405ECA40041D221 /* Resources */,
+				728E533A488712095E25ED76 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -185,6 +212,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2A979735D2312EB6260B5058 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RepositorySurfer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		728E533A488712095E25ED76 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RepositorySurfer/Pods-RepositorySurfer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RepositorySurfer/Pods-RepositorySurfer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RepositorySurfer/Pods-RepositorySurfer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BA23D8ED2405ECA40041D221 /* Sources */ = {
@@ -334,6 +403,7 @@
 		};
 		BA23D9062405ECA50041D221 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDDF05E43C139411C58E1709 /* Pods-RepositorySurfer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -352,6 +422,7 @@
 		};
 		BA23D9072405ECA50041D221 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11B42AD116BFF8EDAF7E0249 /* Pods-RepositorySurfer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
