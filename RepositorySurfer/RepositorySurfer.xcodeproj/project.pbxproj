@@ -25,6 +25,7 @@
 		BA23D9222406006B0041D221 /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D9212406006B0041D221 /* RepositoryTableViewCell.swift */; };
 		BA23D924240602440041D221 /* RepositoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D923240602440041D221 /* RepositoryViewController.swift */; };
 		BA23D926240602AD0041D221 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA23D925240602AD0041D221 /* WebKit.framework */; };
+		BA23D928240607EC0041D221 /* ViperProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D927240607EC0041D221 /* ViperProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		BA23D9212406006B0041D221 /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
 		BA23D923240602440041D221 /* RepositoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryViewController.swift; sourceTree = "<group>"; };
 		BA23D925240602AD0041D221 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		BA23D927240607EC0041D221 /* ViperProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperProtocols.swift; sourceTree = "<group>"; };
 		DDDF05E43C139411C58E1709 /* Pods-RepositorySurfer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RepositorySurfer.debug.xcconfig"; path = "Target Support Files/Pods-RepositorySurfer/Pods-RepositorySurfer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				BA23D9172405FCEC0041D221 /* Builder.swift */,
+				BA23D927240607EC0041D221 /* ViperProtocols.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA23D9142405F8360041D221 /* Worker.swift in Sources */,
+				BA23D928240607EC0041D221 /* ViperProtocols.swift in Sources */,
 				BA23D9162405F84D0041D221 /* GitHubAPI.swift in Sources */,
 				BA23D9182405FCEC0041D221 /* Builder.swift in Sources */,
 				BA23D91C2405FD7B0041D221 /* UIImageViewEx.swift in Sources */,
