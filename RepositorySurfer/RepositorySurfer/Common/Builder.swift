@@ -26,9 +26,19 @@ class Builder {
     
     // MARK: - Scene specific
     
-    static func buildUsersScene() -> UsersViewController {
-        let usersVC: UsersViewController = Builder.initiate(from: .main)
-        return usersVC
+    static func buildUsersModule() -> UsersViewController {
+        let view: UsersViewController = Builder.initiate(from: .main)
+        let interactor = UsersInteractor()
+        let presenter = UsersPresenter()
+        let router = UsersRouter()
+        // link
+        view.presenter = presenter
+        interactor.presenter = presenter
+        presenter.view = view
+        presenter.interactor = interactor
+        presenter.router = router
+        router.view = view
+        return view
     }
     
     static func buildUserDetailScene(with user: User) -> UserDetailViewController {
