@@ -13,7 +13,7 @@ class UsersRouter: ViperRouter {
     weak var view: UsersViewController?
     
     func routeToUserDetail(with user: User) {
-        let userDetailVC = Builder.buildUserDetailScene(with: user)
+        let userDetailVC = Builder.buildUserDetailModule(with: user)
         view?.navigationController?.pushViewController(userDetailVC, animated: true)
     }
 }
