@@ -98,7 +98,9 @@ class UserDetailPresenter: NSObject, ViperPresenter {
     
     private func fetchUserRepositories(_ user: User) {
         interactor?.fetchRepositories(from: user, success: { [weak self] (repositories) in
-            self?.repositories = repositories
+            self?.repositories = repositories.filter({ (repository) -> Bool in
+                return !repository.fork
+            })
             self?.view?.reloadUserRepositories()
             self?.checkFetchUserInfoStatus()
         }, failure: { errorMessage in
