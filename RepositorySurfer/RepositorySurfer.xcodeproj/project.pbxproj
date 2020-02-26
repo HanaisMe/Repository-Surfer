@@ -109,7 +109,7 @@
 				BA23D9082405F6A00041D221 /* Entities */,
 				BA23D9092405F6AE0041D221 /* Networking */,
 				BA23D90A2405F6C20041D221 /* Users Scene */,
-				BA23D90B2405F6D20041D221 /* Repositories Scene */,
+				BA23D90B2405F6D20041D221 /* Repositories Scenes */,
 				BA23D90D2405F6F00041D221 /* Extenstions */,
 				BA23D90E2405F6F60041D221 /* Resources */,
 			);
@@ -147,15 +147,14 @@
 			path = "Users Scene";
 			sourceTree = "<group>";
 		};
-		BA23D90B2405F6D20041D221 /* Repositories Scene */ = {
+		BA23D90B2405F6D20041D221 /* Repositories Scenes */ = {
 			isa = PBXGroup;
 			children = (
 				BA23D91D2405FFD80041D221 /* Repositories.storyboard */,
-				BA23D91F240600040041D221 /* UserDetailViewController.swift */,
-				BA23D9212406006B0041D221 /* RepositoryTableViewCell.swift */,
-				BA23D923240602440041D221 /* RepositoryViewController.swift */,
+				BA23D93024060CD70041D221 /* User Detail Scene */,
+				BA23D93124060CEA0041D221 /* Repository Scene */,
 			);
-			path = "Repositories Scene";
+			path = "Repositories Scenes";
 			sourceTree = "<group>";
 		};
 		BA23D90C2405F6E20041D221 /* Common */ = {
@@ -182,6 +181,23 @@
 				BA23D8FF2405ECA50041D221 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		BA23D93024060CD70041D221 /* User Detail Scene */ = {
+			isa = PBXGroup;
+			children = (
+				BA23D91F240600040041D221 /* UserDetailViewController.swift */,
+				BA23D9212406006B0041D221 /* RepositoryTableViewCell.swift */,
+			);
+			path = "User Detail Scene";
+			sourceTree = "<group>";
+		};
+		BA23D93124060CEA0041D221 /* Repository Scene */ = {
+			isa = PBXGroup;
+			children = (
+				BA23D923240602440041D221 /* RepositoryViewController.swift */,
+			);
+			path = "Repository Scene";
 			sourceTree = "<group>";
 		};
 		D2FBE1DC6A319246BDC1D774 /* Frameworks */ = {
