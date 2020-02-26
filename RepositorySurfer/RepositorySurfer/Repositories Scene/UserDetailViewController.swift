@@ -137,6 +137,8 @@ extension UserDetailViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // TODO: - go to repository
+        let selectedRepository = repositories[indexPath.row]
+        let repositoryVC = Builder.buildRepositoryScene(with: selectedRepository)
+        self.navigationController?.pushViewController(repositoryVC, animated: true)
     }
 }

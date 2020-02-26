@@ -36,4 +36,10 @@ class Builder {
         userDetailVC.user = user
         return userDetailVC
     }
+    
+    static func buildRepositoryScene(with repository: Repository) -> RepositoryViewController {
+        let repositoryVC: RepositoryViewController = Builder.initiate(from: .repositories)
+        repositoryVC.repository = repository
+        return repositoryVC
+    }
 }
