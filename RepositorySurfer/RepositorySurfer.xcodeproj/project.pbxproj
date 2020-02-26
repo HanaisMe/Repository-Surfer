@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,10 @@
 		BA23D8FC2405ECA40041D221 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA23D8FA2405ECA40041D221 /* Main.storyboard */; };
 		BA23D8FE2405ECA50041D221 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA23D8FD2405ECA50041D221 /* Assets.xcassets */; };
 		BA23D9012405ECA50041D221 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA23D8FF2405ECA50041D221 /* LaunchScreen.storyboard */; };
+		BA23D9102405F7F20041D221 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D90F2405F7F20041D221 /* User.swift */; };
+		BA23D9122405F7FD0041D221 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D9112405F7FD0041D221 /* Repository.swift */; };
+		BA23D9142405F8360041D221 /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D9132405F8360041D221 /* Worker.swift */; };
+		BA23D9162405F84D0041D221 /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D9152405F84D0041D221 /* GitHubAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +29,10 @@
 		BA23D8FD2405ECA50041D221 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA23D9002405ECA50041D221 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA23D9022405ECA50041D221 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA23D90F2405F7F20041D221 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BA23D9112405F7FD0041D221 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		BA23D9132405F8360041D221 /* Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
+		BA23D9152405F84D0041D221 /* GitHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPI.swift; sourceTree = "<group>"; };
 		DDDF05E43C139411C58E1709 /* Pods-RepositorySurfer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RepositorySurfer.debug.xcconfig"; path = "Target Support Files/Pods-RepositorySurfer/Pods-RepositorySurfer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -46,7 +54,6 @@
 				DDDF05E43C139411C58E1709 /* Pods-RepositorySurfer.debug.xcconfig */,
 				11B42AD116BFF8EDAF7E0249 /* Pods-RepositorySurfer.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -87,6 +94,8 @@
 		BA23D9082405F6A00041D221 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				BA23D90F2405F7F20041D221 /* User.swift */,
+				BA23D9112405F7FD0041D221 /* Repository.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -94,6 +103,8 @@
 		BA23D9092405F6AE0041D221 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				BA23D9132405F8360041D221 /* Worker.swift */,
+				BA23D9152405F84D0041D221 /* GitHubAPI.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -260,8 +271,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA23D9142405F8360041D221 /* Worker.swift in Sources */,
+				BA23D9162405F84D0041D221 /* GitHubAPI.swift in Sources */,
 				BA23D8F92405ECA40041D221 /* ViewController.swift in Sources */,
 				BA23D8F52405ECA40041D221 /* AppDelegate.swift in Sources */,
+				BA23D9102405F7F20041D221 /* User.swift in Sources */,
+				BA23D9122405F7FD0041D221 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
