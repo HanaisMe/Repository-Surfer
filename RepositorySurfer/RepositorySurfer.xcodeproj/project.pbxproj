@@ -54,14 +54,70 @@
 		BA23D8F32405ECA40041D221 /* RepositorySurfer */ = {
 			isa = PBXGroup;
 			children = (
-				BA23D8F42405ECA40041D221 /* AppDelegate.swift */,
-				BA23D8F82405ECA40041D221 /* ViewController.swift */,
-				BA23D8FA2405ECA40041D221 /* Main.storyboard */,
-				BA23D8FD2405ECA50041D221 /* Assets.xcassets */,
-				BA23D8FF2405ECA50041D221 /* LaunchScreen.storyboard */,
 				BA23D9022405ECA50041D221 /* Info.plist */,
+				BA23D8F42405ECA40041D221 /* AppDelegate.swift */,
+				BA23D90C2405F6E20041D221 /* Common */,
+				BA23D9082405F6A00041D221 /* Entities */,
+				BA23D9092405F6AE0041D221 /* Networking */,
+				BA23D90A2405F6C20041D221 /* Users Scene */,
+				BA23D90B2405F6D20041D221 /* Repositories Scene */,
+				BA23D90D2405F6F00041D221 /* Extenstions */,
+				BA23D90E2405F6F60041D221 /* Resources */,
 			);
 			path = RepositorySurfer;
+			sourceTree = "<group>";
+		};
+		BA23D9082405F6A00041D221 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		BA23D9092405F6AE0041D221 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		BA23D90A2405F6C20041D221 /* Users Scene */ = {
+			isa = PBXGroup;
+			children = (
+				BA23D8FA2405ECA40041D221 /* Main.storyboard */,
+				BA23D8F82405ECA40041D221 /* ViewController.swift */,
+			);
+			path = "Users Scene";
+			sourceTree = "<group>";
+		};
+		BA23D90B2405F6D20041D221 /* Repositories Scene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Repositories Scene";
+			sourceTree = "<group>";
+		};
+		BA23D90C2405F6E20041D221 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		BA23D90D2405F6F00041D221 /* Extenstions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extenstions;
+			sourceTree = "<group>";
+		};
+		BA23D90E2405F6F60041D221 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BA23D8FD2405ECA50041D221 /* Assets.xcassets */,
+				BA23D8FF2405ECA50041D221 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
