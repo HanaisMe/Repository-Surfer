@@ -23,6 +23,7 @@
 		BA23D91E2405FFD80041D221 /* Repositories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA23D91D2405FFD80041D221 /* Repositories.storyboard */; };
 		BA23D920240600040041D221 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D91F240600040041D221 /* UserDetailViewController.swift */; };
 		BA23D9222406006B0041D221 /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D9212406006B0041D221 /* RepositoryTableViewCell.swift */; };
+		BA23D924240602440041D221 /* RepositoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D923240602440041D221 /* RepositoryViewController.swift */; };
 		BA23D926240602AD0041D221 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA23D925240602AD0041D221 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		BA23D91D2405FFD80041D221 /* Repositories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Repositories.storyboard; sourceTree = "<group>"; };
 		BA23D91F240600040041D221 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		BA23D9212406006B0041D221 /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
+		BA23D923240602440041D221 /* RepositoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryViewController.swift; sourceTree = "<group>"; };
 		BA23D925240602AD0041D221 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		DDDF05E43C139411C58E1709 /* Pods-RepositorySurfer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RepositorySurfer.debug.xcconfig"; path = "Target Support Files/Pods-RepositorySurfer/Pods-RepositorySurfer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,6 +142,7 @@
 				BA23D91D2405FFD80041D221 /* Repositories.storyboard */,
 				BA23D91F240600040041D221 /* UserDetailViewController.swift */,
 				BA23D9212406006B0041D221 /* RepositoryTableViewCell.swift */,
+				BA23D923240602440041D221 /* RepositoryViewController.swift */,
 			);
 			path = "Repositories Scene";
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				BA23D9162405F84D0041D221 /* GitHubAPI.swift in Sources */,
 				BA23D9182405FCEC0041D221 /* Builder.swift in Sources */,
 				BA23D91C2405FD7B0041D221 /* UIImageViewEx.swift in Sources */,
+				BA23D924240602440041D221 /* RepositoryViewController.swift in Sources */,
 				BA23D8F92405ECA40041D221 /* UsersViewController.swift in Sources */,
 				BA23D91A2405FD640041D221 /* UserTableViewCell.swift in Sources */,
 				BA23D9222406006B0041D221 /* RepositoryTableViewCell.swift in Sources */,
