@@ -23,4 +23,11 @@ class Builder {
         let theVC = storyboard.instantiateViewController(withIdentifier: className) as! T
         return theVC
     }
+    
+    // MARK: - Scene specific
+    
+    static func buildUsersScene() -> UsersViewController {
+        let usersVC: UsersViewController = Builder.initiate(from: .main)
+        return usersVC
+    }
 }

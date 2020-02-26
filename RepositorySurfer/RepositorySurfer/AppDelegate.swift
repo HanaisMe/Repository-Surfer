@@ -15,8 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        // FIXME: - modify to UsersViewController
-        let mainVC = UIViewController()
+        let mainVC = Builder.buildUsersScene()
         let navVC = UINavigationController.init(rootViewController: mainVC)
         if #available(iOS 13.0, *) {
             navVC.navigationBar.backgroundColor = .systemBackground
@@ -29,4 +28,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 }
-
