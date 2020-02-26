@@ -30,4 +30,10 @@ class Builder {
         let usersVC: UsersViewController = Builder.initiate(from: .main)
         return usersVC
     }
+    
+    static func buildUserDetailScene(with user: User) -> UserDetailViewController {
+        let userDetailVC: UserDetailViewController = Builder.initiate(from: .repositories)
+        userDetailVC.user = user
+        return userDetailVC
+    }
 }
