@@ -8,41 +8,45 @@
 
 import UIKit
 
-class UserDetailViewController: UIViewController {
+class UserDetailViewController: UIViewController, ViperView {
+
+    typealias PresenterType = UserDetailPresenter
+    var presenter: PresenterType?
     
-    var user: User!
+    @IBOutlet weak var userInfoView: UIView!
+    @IBOutlet weak var userInfoViewHeightConstraint: NSLayoutConstraint!
+    // MARK: - User Details
     @IBOutlet weak var iconImageview: UIImageView!
     @IBOutlet weak var fullNameLabel: UILabel!
     @IBOutlet weak var followingCountLabel: UILabel!
     @IBOutlet weak var followerCountLabel: UILabel!
-    
-    var fetchUserDetailStatus = false
-    var fetchUserFollowersStatus = false
-    var fetchUserFollowingsStatus = false
-    @IBOutlet weak var userInfoView: UIView!
-    @IBOutlet weak var userInfoViewHeightConstraint: NSLayoutConstraint!
-    
-    var repositories = [Repository]()
+    // MARK: - User Repositories
     @IBOutlet weak var repositoryTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "@\(user.name)"
         repositoryTableView.dataSource = self
         repositoryTableView.delegate = self
     }
     
-    func initFetchUserInfoStatus() {
-        fetchUserDetailStatus = false
-        fetchUserFollowersStatus = false
-        fetchUserFollowingsStatus = false
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // MARK: - User
+        presenter?.fetchBasicUserInfo()
+        // MARK: - User Details
+        repositoryTableView.isHidden = true
+        userInfoViewHeightConstraint.constant = 90
+        presenter?.fetchDetailedUserInfo()
     }
     
-    func checkFetchUserInfoStatus() {
-        if fetchUserDetailStatus, fetchUserFollowersStatus, fetchUserFollowingsStatus {
-            showUserInfoViewWithAnimation()
-        }
+    // MARK: - User
+    
+    func setBasicUserInfo(_ user: User) {
+        title = "@\(user.name)"
+        iconImageview.loadImage(from: user.icon)
     }
+    
+    // MARK: - User Details
     
     func showUserInfoViewWithAnimation(duration: TimeInterval = 0.5) {
         self.viewWillLayoutSubviews()
@@ -54,67 +58,38 @@ class UserDetailViewController: UIViewController {
         })
     }
     
+    func setDetailedUserInfo(fullName: String?) {
+        DispatchQueue.main.async {
+            self.fullNameLabel.text = fullName
+        }
+    }
+    
+    func setDetailedUserInfo(followersCount: Int) {
+        DispatchQueue.main.async {
+            self.followerCountLabel.text = String(followersCount)
+        }
+    }
+    
+    func setDetailedUserInfo(followingsCount: Int) {
+        DispatchQueue.main.async {
+            self.followingCountLabel.text = String(followingsCount)
+        }
+    }
+    
+    // MARK: - User Repositories
+    
+    func reloadUserRepositories() {
+        DispatchQueue.main.async {
+            self.repositoryTableView.reloadData()
+        }
+    }
+    
     func showRepositoriesWithAnimation(duration: TimeInterval = 1) {
         self.viewWillLayoutSubviews()
         UIView.animate(withDuration: duration, animations: {
             self.repositoryTableView.isHidden = false
             self.repositoryTableView.layoutIfNeeded()
         }, completion: nil)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        iconImageview.loadImage(from: user.icon)
-        
-        initFetchUserInfoStatus()
-        repositoryTableView.isHidden = true
-        userInfoViewHeightConstraint.constant = 90
-        
-        Worker().fetchUserDetail(from: user, success: { [weak self] (userDetail) in
-            self?.fetchUserDetailStatus = true
-            self?.checkFetchUserInfoStatus()
-            self?.user = userDetail // refresh data
-            DispatchQueue.main.async {
-                self?.fullNameLabel.text = userDetail.fullName
-            }
-        }, failure: { errorMessage in
-            // TODO: - handle error
-            print(errorMessage)
-        })
-        
-        Worker().fetchUserFollowers(from: user, success: { [weak self] (followers) in
-            self?.fetchUserFollowersStatus = true
-            self?.checkFetchUserInfoStatus()
-            DispatchQueue.main.async {
-                self?.followerCountLabel.text = String(followers.count)
-            }
-        }, failure: { errorMessage in
-            // TODO: - handle error
-            print(errorMessage)
-        })
-                                      
-        Worker().fetchUserFollowings(from: user, success: {[weak self] (followings) in
-            self?.fetchUserFollowingsStatus = true
-            self?.checkFetchUserInfoStatus()
-            DispatchQueue.main.async {
-                self?.followingCountLabel.text = String(followings.count)
-            }
-        }, failure: { errorMessage in
-            // TODO: - handle error
-            print(errorMessage)
-        })
-        
-        Worker().fetchRepositories(from: user, success: { [weak self] (repositories) in
-            self?.repositories = repositories
-            self?.checkFetchUserInfoStatus()
-            DispatchQueue.main.async {
-                self?.repositoryTableView.reloadData()
-            }
-        }, failure: { errorMessage in
-            // TODO: - handle error
-            print(errorMessage)
-        })
     }
 }
 
@@ -123,7 +98,7 @@ class UserDetailViewController: UIViewController {
 extension UserDetailViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return repositories.count
+        return presenter?.getRepositoriesCount() ?? 0
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -132,13 +107,13 @@ extension UserDetailViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RepositoryTableViewCell_ID", for: indexPath) as! RepositoryTableViewCell
-        cell.setUI(with: repositories[indexPath.row])
+        if let repository = presenter?.getRepository(at: indexPath.row) {
+            cell.setUI(with: repository)
+        }
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedRepository = repositories[indexPath.row]
-        let repositoryVC = Builder.buildRepositoryScene(with: selectedRepository)
-        self.navigationController?.pushViewController(repositoryVC, animated: true)
+        presenter?.selectRepository(at: indexPath.row)
     }
 }

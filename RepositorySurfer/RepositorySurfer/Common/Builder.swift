@@ -41,10 +41,19 @@ class Builder {
         return view
     }
     
-    static func buildUserDetailScene(with user: User) -> UserDetailViewController {
-        let userDetailVC: UserDetailViewController = Builder.initiate(from: .repositories)
-        userDetailVC.user = user
-        return userDetailVC
+    static func buildUserDetailModule(with user: User) -> UserDetailViewController {
+        let view: UserDetailViewController = Builder.initiate(from: .repositories)
+        let interactor = UserDetailInteractor()
+        let presenter = UserDetailPresenter(with: user)
+        let router = UserDetailRouter()
+        // link
+        view.presenter = presenter
+        interactor.presenter = presenter
+        presenter.view = view
+        presenter.interactor = interactor
+        presenter.router = router
+        router.view = view
+        return view
     }
     
     static func buildRepositoryScene(with repository: Repository) -> RepositoryViewController {
