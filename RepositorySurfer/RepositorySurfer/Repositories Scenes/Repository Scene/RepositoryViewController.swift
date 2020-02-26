@@ -9,9 +9,11 @@
 import UIKit
 import WebKit
 
-class RepositoryViewController: UIViewController {
+class RepositoryViewController: UIViewController, ViperView {
 
-    var repository: Repository!
+    typealias PresenterType = RepositoryPresenter
+    var presenter: PresenterType?
+    
     @IBOutlet weak var repositoryWebView: WKWebView!
     @IBOutlet weak var goBackButton: UIBarButtonItem!
     @IBOutlet weak var goForwardButton: UIBarButtonItem!
@@ -28,6 +30,10 @@ class RepositoryViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        presenter?.setupView()
+    }
+    
+    func loadRepositoryWebKit(with repository: Repository) {
         let request = URLRequest(url: repository.url)
         repositoryWebView.load(request)
     }
@@ -38,8 +44,7 @@ class RepositoryViewController: UIViewController {
         if repositoryWebView.url != nil {
             repositoryWebView.reload()
         } else {
-            let request = URLRequest(url: repository.url)
-            repositoryWebView.load(request)
+            presenter?.setupView()
         }
     }
     

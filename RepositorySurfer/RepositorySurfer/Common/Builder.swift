@@ -56,9 +56,18 @@ class Builder {
         return view
     }
     
-    static func buildRepositoryScene(with repository: Repository) -> RepositoryViewController {
-        let repositoryVC: RepositoryViewController = Builder.initiate(from: .repositories)
-        repositoryVC.repository = repository
-        return repositoryVC
+    static func buildRepositoryModule(with repository: Repository) -> RepositoryViewController {
+        let view: RepositoryViewController = Builder.initiate(from: .repositories)
+        let interactor = RepositoryInteractor()
+        let presenter = RepositoryPresenter(with: repository)
+        let router = RepositoryRouter()
+        // link
+        view.presenter = presenter
+        interactor.presenter = presenter
+        presenter.view = view
+        presenter.interactor = interactor
+        presenter.router = router
+        router.view = view
+        return view
     }
 }

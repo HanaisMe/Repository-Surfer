@@ -13,7 +13,7 @@ class UserDetailRouter: ViperRouter {
     weak var view: UserDetailViewController?
     
     func routeToRepository(with repository: Repository) {
-        let repositoryVC = Builder.buildRepositoryScene(with: repository)
+        let repositoryVC = Builder.buildRepositoryModule(with: repository)
         view?.navigationController?.pushViewController(repositoryVC, animated: true)
     }
 }
