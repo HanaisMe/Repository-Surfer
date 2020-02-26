@@ -20,6 +20,11 @@
 		BA23D9182405FCEC0041D221 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D9172405FCEC0041D221 /* Builder.swift */; };
 		BA23D91A2405FD640041D221 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D9192405FD640041D221 /* UserTableViewCell.swift */; };
 		BA23D91C2405FD7B0041D221 /* UIImageViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D91B2405FD7B0041D221 /* UIImageViewEx.swift */; };
+		BA23D91E2405FFD80041D221 /* Repositories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA23D91D2405FFD80041D221 /* Repositories.storyboard */; };
+		BA23D920240600040041D221 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D91F240600040041D221 /* UserDetailViewController.swift */; };
+		BA23D9222406006B0041D221 /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D9212406006B0041D221 /* RepositoryTableViewCell.swift */; };
+		BA23D924240602440041D221 /* RepositoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D923240602440041D221 /* RepositoryViewController.swift */; };
+		BA23D926240602AD0041D221 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA23D925240602AD0041D221 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +44,11 @@
 		BA23D9172405FCEC0041D221 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		BA23D9192405FD640041D221 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		BA23D91B2405FD7B0041D221 /* UIImageViewEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewEx.swift; sourceTree = "<group>"; };
+		BA23D91D2405FFD80041D221 /* Repositories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Repositories.storyboard; sourceTree = "<group>"; };
+		BA23D91F240600040041D221 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		BA23D9212406006B0041D221 /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
+		BA23D923240602440041D221 /* RepositoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryViewController.swift; sourceTree = "<group>"; };
+		BA23D925240602AD0041D221 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		DDDF05E43C139411C58E1709 /* Pods-RepositorySurfer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RepositorySurfer.debug.xcconfig"; path = "Target Support Files/Pods-RepositorySurfer/Pods-RepositorySurfer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -47,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA23D926240602AD0041D221 /* WebKit.framework in Frameworks */,
 				173C769FFF6072EF5A53F09E /* Pods_RepositorySurfer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,6 +139,10 @@
 		BA23D90B2405F6D20041D221 /* Repositories Scene */ = {
 			isa = PBXGroup;
 			children = (
+				BA23D91D2405FFD80041D221 /* Repositories.storyboard */,
+				BA23D91F240600040041D221 /* UserDetailViewController.swift */,
+				BA23D9212406006B0041D221 /* RepositoryTableViewCell.swift */,
+				BA23D923240602440041D221 /* RepositoryViewController.swift */,
 			);
 			path = "Repositories Scene";
 			sourceTree = "<group>";
@@ -160,6 +175,7 @@
 		D2FBE1DC6A319246BDC1D774 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BA23D925240602AD0041D221 /* WebKit.framework */,
 				B6D12B74342FEFAF471EFE72 /* Pods_RepositorySurfer.framework */,
 			);
 			name = Frameworks;
@@ -227,6 +243,7 @@
 			files = (
 				BA23D9012405ECA50041D221 /* LaunchScreen.storyboard in Resources */,
 				BA23D8FE2405ECA50041D221 /* Assets.xcassets in Resources */,
+				BA23D91E2405FFD80041D221 /* Repositories.storyboard in Resources */,
 				BA23D8FC2405ECA40041D221 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,8 +301,11 @@
 				BA23D9162405F84D0041D221 /* GitHubAPI.swift in Sources */,
 				BA23D9182405FCEC0041D221 /* Builder.swift in Sources */,
 				BA23D91C2405FD7B0041D221 /* UIImageViewEx.swift in Sources */,
+				BA23D924240602440041D221 /* RepositoryViewController.swift in Sources */,
 				BA23D8F92405ECA40041D221 /* UsersViewController.swift in Sources */,
 				BA23D91A2405FD640041D221 /* UserTableViewCell.swift in Sources */,
+				BA23D9222406006B0041D221 /* RepositoryTableViewCell.swift in Sources */,
+				BA23D920240600040041D221 /* UserDetailViewController.swift in Sources */,
 				BA23D8F52405ECA40041D221 /* AppDelegate.swift in Sources */,
 				BA23D9102405F7F20041D221 /* User.swift in Sources */,
 				BA23D9122405F7FD0041D221 /* Repository.swift in Sources */,

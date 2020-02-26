@@ -54,6 +54,8 @@ extension UsersViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // TODO: - go to repositories
+        let selectedUser = users[indexPath.row]
+        let userDetailVC = Builder.buildUserDetailScene(with: selectedUser)
+        self.navigationController?.pushViewController(userDetailVC, animated: true)
     }
 }
