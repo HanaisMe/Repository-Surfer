@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		173C769FFF6072EF5A53F09E /* Pods_RepositorySurfer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6D12B74342FEFAF471EFE72 /* Pods_RepositorySurfer.framework */; };
 		BA23D8F52405ECA40041D221 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D8F42405ECA40041D221 /* AppDelegate.swift */; };
-		BA23D8F92405ECA40041D221 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D8F82405ECA40041D221 /* ViewController.swift */; };
+		BA23D8F92405ECA40041D221 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D8F82405ECA40041D221 /* UsersViewController.swift */; };
 		BA23D8FC2405ECA40041D221 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA23D8FA2405ECA40041D221 /* Main.storyboard */; };
 		BA23D8FE2405ECA50041D221 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA23D8FD2405ECA50041D221 /* Assets.xcassets */; };
 		BA23D9012405ECA50041D221 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA23D8FF2405ECA50041D221 /* LaunchScreen.storyboard */; };
@@ -17,6 +17,9 @@
 		BA23D9122405F7FD0041D221 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D9112405F7FD0041D221 /* Repository.swift */; };
 		BA23D9142405F8360041D221 /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D9132405F8360041D221 /* Worker.swift */; };
 		BA23D9162405F84D0041D221 /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D9152405F84D0041D221 /* GitHubAPI.swift */; };
+		BA23D9182405FCEC0041D221 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D9172405FCEC0041D221 /* Builder.swift */; };
+		BA23D91A2405FD640041D221 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D9192405FD640041D221 /* UserTableViewCell.swift */; };
+		BA23D91C2405FD7B0041D221 /* UIImageViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23D91B2405FD7B0041D221 /* UIImageViewEx.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +27,7 @@
 		B6D12B74342FEFAF471EFE72 /* Pods_RepositorySurfer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RepositorySurfer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA23D8F12405ECA40041D221 /* RepositorySurfer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RepositorySurfer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA23D8F42405ECA40041D221 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BA23D8F82405ECA40041D221 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BA23D8F82405ECA40041D221 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		BA23D8FB2405ECA40041D221 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BA23D8FD2405ECA50041D221 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA23D9002405ECA50041D221 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -33,6 +36,9 @@
 		BA23D9112405F7FD0041D221 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		BA23D9132405F8360041D221 /* Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
 		BA23D9152405F84D0041D221 /* GitHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPI.swift; sourceTree = "<group>"; };
+		BA23D9172405FCEC0041D221 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		BA23D9192405FD640041D221 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		BA23D91B2405FD7B0041D221 /* UIImageViewEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewEx.swift; sourceTree = "<group>"; };
 		DDDF05E43C139411C58E1709 /* Pods-RepositorySurfer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RepositorySurfer.debug.xcconfig"; path = "Target Support Files/Pods-RepositorySurfer/Pods-RepositorySurfer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,7 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				BA23D8FA2405ECA40041D221 /* Main.storyboard */,
-				BA23D8F82405ECA40041D221 /* ViewController.swift */,
+				BA23D8F82405ECA40041D221 /* UsersViewController.swift */,
+				BA23D9192405FD640041D221 /* UserTableViewCell.swift */,
 			);
 			path = "Users Scene";
 			sourceTree = "<group>";
@@ -128,6 +135,7 @@
 		BA23D90C2405F6E20041D221 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				BA23D9172405FCEC0041D221 /* Builder.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -135,6 +143,7 @@
 		BA23D90D2405F6F00041D221 /* Extenstions */ = {
 			isa = PBXGroup;
 			children = (
+				BA23D91B2405FD7B0041D221 /* UIImageViewEx.swift */,
 			);
 			path = Extenstions;
 			sourceTree = "<group>";
@@ -273,7 +282,10 @@
 			files = (
 				BA23D9142405F8360041D221 /* Worker.swift in Sources */,
 				BA23D9162405F84D0041D221 /* GitHubAPI.swift in Sources */,
-				BA23D8F92405ECA40041D221 /* ViewController.swift in Sources */,
+				BA23D9182405FCEC0041D221 /* Builder.swift in Sources */,
+				BA23D91C2405FD7B0041D221 /* UIImageViewEx.swift in Sources */,
+				BA23D8F92405ECA40041D221 /* UsersViewController.swift in Sources */,
+				BA23D91A2405FD640041D221 /* UserTableViewCell.swift in Sources */,
 				BA23D8F52405ECA40041D221 /* AppDelegate.swift in Sources */,
 				BA23D9102405F7F20041D221 /* User.swift in Sources */,
 				BA23D9122405F7FD0041D221 /* Repository.swift in Sources */,
